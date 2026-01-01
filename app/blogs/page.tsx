@@ -1,5 +1,12 @@
 import React from "react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Layout | Blogs Page",
+  description: "This is the blogs page",
+};
+
 const page = () => {
   return (
     <div>
