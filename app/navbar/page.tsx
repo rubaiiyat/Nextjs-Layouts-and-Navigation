@@ -1,6 +1,12 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const activeClass = "text-accent font-bold";
+  const normalClass = "";
+  console.log(pathname);
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -10,17 +16,37 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                className={pathname === "/" ? activeClass : normalClass}
+                href="/"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="blogs/">Blogs</Link>
+              <Link
+                className={pathname === "/blogs" ? activeClass : normalClass}
+                href="blogs/"
+              >
+                Blogs
+              </Link>
             </li>
             <li>
-              <Link href="about/">About</Link>
+              <Link
+                className={pathname === "/about" ? activeClass : normalClass}
+                href="about/"
+              >
+                About
+              </Link>
             </li>
 
             <li>
-              <Link href="contact/">Contact</Link>
+              <Link
+                className={pathname === "/contact" ? activeClass : normalClass}
+                href="contact/"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
