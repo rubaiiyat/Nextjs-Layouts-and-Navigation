@@ -3,7 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Layout | Blogs Page",
+  title: "Blogs",
   description: "This is the blogs page",
 };
 
